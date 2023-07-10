@@ -1,0 +1,22 @@
+.card {
+  width: 20%;
+  border: solid 1px black;
+  padding: 2rem 1rem;
+  color: blue;
+  font-size: 12px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.card h1 {
+  color: black;
+  font-size: 18px;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.16;
+  width: 90%;
+}
