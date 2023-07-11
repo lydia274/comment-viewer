@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 
 async function fetchUsers() {
-  const response = await axios.get("https://random-data-api.com/api/v2/users")
+  const response = await axios.get(
+    "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
+  )
   return response.data
 }
 
@@ -25,9 +27,9 @@ function User() {
         {users.map((user) => (
           <div key={user.id}>
             <h3>{user.first_name}</h3>
+            <img src={user.avatar} alt="profile pic" />
             <p>{user.email}</p>
             <p>{user.gender}</p>
-            <Link to={`/browse/${user.id}`}> Learn more </Link>
           </div>
         ))}
       </div>

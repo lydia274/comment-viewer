@@ -12,6 +12,7 @@ function App() {
       <main>
         <header>
           <Header />
+          <Home />
           <p>bim</p>bimbim
         </header>
         <div className="users-field"></div>
