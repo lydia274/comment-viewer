@@ -1,8 +1,38 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import axios from "axios"
 
+async function fetchUsers() {
+  const response = await axios.get("https://random-data-api.com/api/v2/users")
+  return response.data
+}
+
 function User() {
-  return <card>User</card>
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    fetchUsers().then((data) => {
+      setUsers(data)
+    })
+  }, [])
+
+  if (!users.length) {
+    return <p>Loading...</p>
+  }
+
+  return (
+    <div className="wrap">
+      <div className="user-item">
+        {users.map((user) => (
+          <div key={user.id}>
+            <h3>{user.first_name}</h3>
+            <p>{user.email}</p>
+            <p>{user.gender}</p>
+            <Link to={`/browse/${user.id}`}> Learn more </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default User
