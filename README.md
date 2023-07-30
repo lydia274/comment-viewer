@@ -1,4 +1,3 @@
-# users-api
-A React web app that simulates a platform that fetches user information and comments.
+##Comment Viewer App (API)
 
-I am using a public API (https://random-data-api.com/api/v2/users)  for user information and passing props between components to display comments from a jsx file.
+A React web app for displaying user information and comments. The app fetches user information from a public API (https://random-data-api.com/api/v2/users) and utilizes props to pass data between components. Users' comments are displayed in real-time through dynamic rendering.
