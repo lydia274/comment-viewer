@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .users-field {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+#root {
+  background-color: #383e42;
+  margin: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Press Start 2P", cursive;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }

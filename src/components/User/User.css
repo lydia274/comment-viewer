@@ -1,33 +1,64 @@
 .card {
   width: 20%;
   margin-left: 30%;
-  border: solid 1px blue;
+  border: solid 1px greenyellow;
   padding: 2rem 1rem;
-  color: blue;
+
+  color: white;
   font-size: 12px;
   position: relative;
   border-radius: 5px;
 }
 
-.card h1 {
-  color: black;
-  font-size: 18px;
-}
-
 .wrap {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .user-item {
-  border: solid 1px black;
+  position: relative;
+  border: solid 1px yellow;
   border-radius: 12px;
-  padding: 1rem 2rem;
-  margin: 1rem 2rem;
-  overflow: auto;
+  margin: 0.5rem 1rem;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  overflow: hidden; /* Prevent text from overflowing */
 }
 
 #gender {
   font-style: oblique;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: width 1s ease-out;
+}
+
+.user-item:hover .avatar {
+  width: 150px;
+}
+
+.userpic-container {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usertext-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }

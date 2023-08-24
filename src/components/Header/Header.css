@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital@1&display=swap");
+
+#header-title {
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: black;
+}
+#header-highlight {
+  background-color: yellow;
+  color: black;
+  font-family: "Alegreya SC", serif;
+}
+#header-text {
+  margin-top: 2rem;
+}
