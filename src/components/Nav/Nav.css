@@ -1,13 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital@1&display=swap");
+
 ul {
   display: flex;
   justify-content: space-between;
-  text-decoration: none;
+
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
 }
 
 .nav-container {
   width: 30vw;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 0 auto;
+  top: 0;
+  /* padding-bottom: 0.05rem; */
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+  font-family: "Alegreya SC", serif;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: white;
 }
