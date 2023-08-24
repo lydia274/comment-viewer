@@ -1,6 +1,7 @@
 .card {
   width: 20%;
-  border: solid 1px black;
+  margin-left: 30%;
+  border: solid 1px blue;
   padding: 2rem 1rem;
   color: blue;
   font-size: 12px;
@@ -13,18 +14,20 @@
   font-size: 18px;
 }
 
-.card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.16;
-  width: 90%;
-}
 .wrap {
-  width: 40%;
+  width: 50%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .user-item {
   border: solid 1px black;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  overflow: auto;
+}
+
+#gender {
+  font-style: oblique;
 }

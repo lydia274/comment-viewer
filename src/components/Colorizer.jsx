@@ -18,9 +18,7 @@ const Colorizer = () => {
 
   return (
     <div className="color-picker" style={{ backgroundColor }}>
-      <div className="color-button" onMouseOver={handleColorChange}>
-        <User />
-      </div>
+      <div className="color-button" onMouseOver={handleColorChange}></div>
     </div>
   )
 }

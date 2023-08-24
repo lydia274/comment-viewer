@@ -4,7 +4,7 @@ import "./User.css"
 
 async function fetchUsers() {
   const response = await axios.get(
-    "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
+    "https://random-data-api.com/api/v2/users?size=10&is_xml=true"
   )
   return response.data
 }
@@ -23,20 +23,20 @@ function User() {
   }
 
   return (
-    <div className="wrap">
+    <div className="wrap card">
       <div>
-        <p>
-          This is a block where i fetch users first names, avatars email &
-          gender
-        </p>
-      </div>
-      <div className="user-item">
         {users.map((user) => (
-          <div key={user.id}>
-            <h3>{user.first_name}</h3>
-            <img src={user.avatar} alt="profile pic" />
-            <p>{user.email}</p>
-            <p>{user.gender}</p>
+          <div key={user.id} className="user-item">
+            <div>
+              <img src={user.avatar} alt="profile pic" />
+            </div>
+            <div>
+              <h3>
+                {user.first_name} | <span id="gender">{user.gender}</span>
+              </h3>
+
+              <p>{user.email}</p>
+            </div>
           </div>
         ))}
       </div>
