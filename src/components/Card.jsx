@@ -1,6 +1,6 @@
 import React from "react"
 import Body from "./Body"
-import Header from "./Header"
+import Header from "./Header/Header"
 
 function Card(props) {
   return (

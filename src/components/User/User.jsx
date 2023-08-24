@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import "./User.css"
 
 async function fetchUsers() {
   const response = await axios.get(
@@ -23,6 +24,12 @@ function User() {
 
   return (
     <div className="wrap">
+      <div>
+        <p>
+          This is a block where i fetch users first names, avatars email &
+          gender
+        </p>
+      </div>
       <div className="user-item">
         {users.map((user) => (
           <div key={user.id}>
