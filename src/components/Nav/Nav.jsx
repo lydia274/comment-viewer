@@ -6,7 +6,7 @@ import Colorizer from "../Colorizer"
 function Nav() {
   return (
     <div className="nav-container">
-      <ul>
+      <ul classNamee="ul-nav">
         <li>
           <Link to="/">home</Link>
         </li>

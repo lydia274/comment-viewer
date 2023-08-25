@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital@1&display=swap");
 
-ul {
+.ul-nav {
   display: flex;
   justify-content: space-between;
 
@@ -18,7 +18,7 @@ ul {
 a {
   color: yellow;
   text-decoration: none;
-  font-family: "Alegreya SC", serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover {

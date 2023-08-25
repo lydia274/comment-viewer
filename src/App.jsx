@@ -12,9 +12,9 @@ import About from "./pages/About/About"
 function App() {
   return (
     <Router>
-      <header>
-        <Header />
-      </header>
+      {/* <header> */}
+      <Header />
+      {/* </header> */}
       <Routes>
         {" "}
         {/* Use Routes component to define your routes */}
@@ -22,7 +22,6 @@ function App() {
         <Route path="/about/" element={<About />} />
       </Routes>
       <Footer />
-      <ColorPicker />
     </Router>
   )
 }
