@@ -14,11 +14,14 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: black;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  padding: 10px;
+  outline: 2px solid rgba(255, 223, 0, 0.8);
+  box-shadow: 0 0 10px rgba(242, 255, 0, 0.8);
+  color: white;
+  width: 40%; /* Could be more or less, depending on screen size */
+  display: flex;
 }
 
 /* The Close Button */
@@ -31,7 +34,19 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
+}
+
+#portrait-pic {
+  width: 15rem;
+  height: auto;
+  bottom: 2rem;
+}
+.portrait-title {
+}
+#profile-intro {
+  padding: 1rem;
+  width: 50%;
 }
