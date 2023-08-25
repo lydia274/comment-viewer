@@ -1,17 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Modal.css"
 
 const Modal = ({ user, onClose }) => {
+  useEffect(() => {
+    const closeModalOnOutsideClick = (event) => {
+      if (event.target.id === "modal") {
+        onClose()
+      }
+    }
+
+    window.addEventListener("click", closeModalOnOutsideClick)
+
+    return () => {
+      window.removeEventListener("click", closeModalOnOutsideClick)
+    }
+  }, [onClose])
+
   if (!user) return null
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none"
-    }
-  }
-
   return (
-    <div className="modal">
+    <div className="modal" id="modal">
       <div className="modal-content">
         <span className="close" onClick={onClose}>
           &times;
