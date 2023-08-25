@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import "./user.css" // Use kebab-case for file names
+import "./User.css"
+import Modal from "../Modal/Modal"
 
 function User() {
   const [users, setUsers] = useState([])
-
   useEffect(() => {
     async function fetchUsers() {
       const response = await axios.get(
@@ -16,35 +16,33 @@ function User() {
     fetchUsers()
   }, [])
 
-  const toggleShowEmail = (userId) => {
-    setUsers((prevUsers) =>
-      prevUsers.map((user) =>
-        user.id === userId ? { ...user, showEmail: !user.showEmail } : user
-      )
-    )
+  const [selectedUser, setSelectedUser] = useState(null)
+
+  const openModal = (user) => {
+    setSelectedUser(user)
+  }
+
+  const closeModal = () => {
+    setSelectedUser(null)
   }
 
   return (
     <div className="card wrap">
       {users.map((user) => (
-        <div key={user.id} className="user-item">
+        <div
+          key={user.id}
+          className="user-item"
+          onClick={() => openModal(user)}
+        >
           <div className="userpic-container">
             <img src={user.avatar} alt="profile pic" className="avatar" />
           </div>
           <div className="usertext-container">
-            <h4 className="user-title">
-              {user.first_name} | <span id="gender">{user.gender}</span>{" "}
-            </h4>
-
-            <p
-              onMouseEnter={() => toggleShowEmail(user.id)}
-              onMouseLeave={() => toggleShowEmail(user.id)}
-            >
-              {user.showEmail ? user.email : `Contact ${user.first_name}`}
-            </p>
+            <h4 className="user-title">{user.first_name}</h4>
           </div>
         </div>
       ))}
+      {selectedUser && <Modal user={selectedUser} onClose={closeModal} />}
     </div>
   )
 }

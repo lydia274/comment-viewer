@@ -1,30 +1,36 @@
 .card {
-  width: 20%;
-  margin-left: 30%;
-  border: solid 1px greenyellow;
-  padding: 2rem 1rem;
+  /* width: 50%; */
+  margin: 0 auto;
+  border: solid 0.2px greenyellow;
 
   color: white;
   font-size: 12px;
   position: relative;
   border-radius: 5px;
 }
-
 .wrap {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .user-item {
   position: relative;
-  border: solid 1px yellow;
+  /* border: solid 1px yellow; */
+
   border-radius: 12px;
-  margin: 0.5rem 1rem;
+  margin: 1rem;
   width: 200px;
   height: 200px;
   background-color: black;
   overflow: hidden; /* Prevent text from overflowing */
+  transition: outline 0.3s ease-in-out;
+}
+
+.user-item:hover {
+  outline: 2px solid rgba(255, 223, 0, 0.8);
+  box-shadow: 0 0 10px rgba(242, 255, 0, 0.8);
+  cursor: pointer;
 }
 
 #gender {
@@ -44,7 +50,7 @@
 
 .userpic-container {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
@@ -58,7 +64,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }

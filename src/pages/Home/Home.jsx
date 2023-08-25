@@ -4,7 +4,11 @@ import { Link } from "react-router-dom"
 import User from "../../components/User/User"
 
 function Home() {
-  return <User />
+  return (
+    <>
+      <User />
+    </>
+  )
 }
 
 export default Home
