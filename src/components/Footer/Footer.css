@@ -21,6 +21,8 @@
 .container-footer {
   padding: 2rem 4rem;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-title {
