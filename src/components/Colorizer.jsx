@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import User from "./User/User"
-// import "./ColorPicker.css"
 
 const Colorizer = () => {
   const colors = ["#FF5733", "#FFC300", "#4CAF50", "#2196F3", "#9C27B0"]

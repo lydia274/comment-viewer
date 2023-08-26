@@ -9,6 +9,7 @@ export default function About() {
           title="About the project"
           body="The project is built on React JS, using API to fetch data from https://random-data-api.com/"
         />
+        <Article body="Easter Egg! Hover the color band in the header to see  its background change" />
       </div>
     </>
   )

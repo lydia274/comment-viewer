@@ -13,8 +13,8 @@ function Footer() {
             https://random-data-api.com/.
           </p>
         </div>
-        <div>
-          <ul className="list-block">
+        <div className="list-block">
+          <ul>
             <li className="list-title">
               <Link to="/" className="">
                 Home
@@ -27,67 +27,15 @@ function Footer() {
             </li>
             <li className="">
               <Link to="/more/" className="">
-                More projects
+                Other projects
               </Link>
             </li>
           </ul>
         </div>
 
-        <div>
-          <ul className="list-block">
-            <li className="list-title">
-              <Link to="#" className="">
-                Partenaires
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Villes
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Régions IDF
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Hôpitaux
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Entreprises, institutions
-              </Link>
-            </li>
-            <br />
-
-            <li className="">
-              <Link to="#" className="">
-                Politique de confidentialité
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul className="list-block">
-            <li className="list-title">
-              <Link to="#" className="">
-                Contact me
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Blog
-              </Link>
-            </li>
-            <li className="">
-              <Link to="#" className="">
-                Les soirées citoyennes
-              </Link>
-            </li>
-
+        <div className="list-block">
+          <ul>
+            <li className="list-title">Contact me</li>
             <li>
               <div className="socials-container">
                 <Link to="#" className="">
@@ -111,6 +59,13 @@ function Footer() {
               </div>
             </li>
           </ul>
+        </div>
+        <div className="list-block">
+          <p>
+            Website designed and developed by{" "}
+            <Link to="https://github.com/lydia274">lydia274</Link>. <br />
+            Last updated: August, 2023
+          </p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,6 @@
 import React from "react"
 import "./Nav.css"
 import { Link } from "react-router-dom"
-import Colorizer from "../Colorizer"
 
 function Nav() {
   return (
@@ -14,10 +13,9 @@ function Nav() {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/other">Other projects</Link>
+          <Link to="/more">Other projects</Link>
         </li>
       </ul>
-      <Colorizer />
     </div>
   )
 }

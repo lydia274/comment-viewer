@@ -6,7 +6,13 @@ function Header(props) {
   return (
     <div id="header-title">
       <h1 id="header-text">Extraterrestrial and Extraordinary</h1>
-      <p id="header-highlight">The first interstellar mingling portal</p>
+      <p
+        id="header-highlight"
+        style={{ backgroundColor: props.backgroundColor }}
+        onMouseOver={props.onColorChange}
+      >
+        The first interstellar mingling portal
+      </p>
       <Nav />
     </div>
   )

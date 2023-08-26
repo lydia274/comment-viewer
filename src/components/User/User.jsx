@@ -8,7 +8,7 @@ function User() {
   useEffect(() => {
     async function fetchUsers() {
       const response = await axios.get(
-        "https://random-data-api.com/api/v2/users?size=10&is_xml=true"
+        "https://random-data-api.com/api/v2/users?size=12&is_xml=true"
       )
       setUsers(response.data)
     }
